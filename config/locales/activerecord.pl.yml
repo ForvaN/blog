@@ -1,0 +1,19 @@
+pl:
+  activerecord:
+    models:
+      post: "Artykuł"
+    attributes:
+      post:
+        title: "Tytuł"
+        summary: "Podsumowanie artykułu"
+        body: "Treść"
+    errors:
+      models:
+        post:
+          attributes:
+            title:
+              blank: "nie może być pusty"
+            summary:
+              blank: "nie może być puste"
+            body:
+              blank: "nie może być pusta"
