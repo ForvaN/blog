@@ -30,8 +30,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.submit t(".submit", action: @post.new_record? ? "Dodaj" : "Edytuj" ),
-      class: "btn btn-primary" %>
-    <%= link_to t("common.back"), :back, class: "btn btn-outline-secondary" %>
+    <%= f.submit "Zapisz", class: "btn btn-primary" %>
+    <%= link_to "Wróć", :back, class: "btn btn-outline-secondary" %>
   </div>
 <% end %>
