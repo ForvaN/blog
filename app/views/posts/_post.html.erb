@@ -4,9 +4,9 @@
     <small>
       <time><%= post.created_at.to_date.strftime("%d %B, %Y") %></time>
       |
-      <%= link_to "Edytować", edit_post_path(post) %>
+      <%= link_to "Edytuj", edit_post_path(post) %>
       |
-      <%= link_to "Usunąć", post_path(post), method: :delete,
+      <%= link_to "Usuń", post_path(post), method: :delete,
         data: { confirm: "Jesteś pewien?" } %>
     </small>
   </section>
@@ -14,5 +14,9 @@
     <%= image_tag post.image.url(:thumb),
       class: "img-thumbnail thumb" if post.image? %>
     <%= post.summary %>
+  </section>
+  <section class="footer-summary">
+    <%= raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t),
+      class: "badge badge-secondary" }.join(" ") %>
   </section>
 </article>

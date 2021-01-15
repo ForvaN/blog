@@ -1,0 +1,13 @@
+pl:
+  common:
+    errors: "Wystąpiły błędy podczas wypełniania formularza"
+    back: "Wróć"
+  posts:
+    index:
+      title: "Artykuły"
+    new:
+      title: "Nowy artykuł"
+    edit:
+      title: "Edycja artykułu"
+    form:
+      submit: "%{action} artykuł"
