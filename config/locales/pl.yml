@@ -2,6 +2,9 @@ pl:
   common:
     errors: "Wystąpiły błędy podczas wypełniania formularza"
     back: "Wróć"
+  will_paginate:
+    previous_label: "&#10096;"
+    next_label: "&#10097;"
   posts:
     index:
       title: "Artykuły"
