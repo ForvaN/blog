@@ -17,7 +17,8 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post, success: "Artykuł pomyślnie utworzono"
     else
-      render :new, danger: "Artykuł nie został utworzony"
+      flash.now[:danger] = "Artykuł nie został utworzony"
+      render :new
     end
   end
 
@@ -28,7 +29,8 @@ class PostsController < ApplicationController
     if @post.update_attributes(post_params)
       redirect_to @post, success: "Artykuł pomyślnie zaktualizowano"
     else
-      render :edit, danger: "Artykuł nie został zaktualizowany"
+      flash.now[:danger] = "Artykuł nie został zaktualizowany"
+      render :edit
     end
   end
 
