@@ -2,12 +2,16 @@ pl:
   activerecord:
     models:
       post: "Artykuł"
+      category: "Kategoria"
     attributes:
       post:
         title: "Tytuł"
         summary: "Podsumowanie artykułu"
         body: "Treść"
         all_tags: "Tagi"
+      category:
+        name: "Nazwa kategorii"
+        parent_id: "Kategoria rodzic"
     errors:
       models:
         post:
@@ -17,4 +21,8 @@ pl:
             summary:
               blank: "nie może być puste"
             body:
+              blank: "nie może być pusta"
+        category:
+          attributes:
+            name:
               blank: "nie może być pusta"

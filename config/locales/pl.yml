@@ -14,3 +14,12 @@ pl:
       title: "Edycja artykułu"
     form:
       submit: "%{action} artykuł"
+  categories:
+    index:
+      title: "Kategorie"
+    new:
+      title: "Nowa kategoria"
+    edit:
+      title: "Edycja kategorii"
+    form:
+      submit: "%{action} kategorię"

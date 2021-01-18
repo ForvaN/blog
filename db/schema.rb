@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_16_064550) do
+ActiveRecord::Schema.define(version: 2021_01_17_184240) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -43,12 +43,22 @@ ActiveRecord::Schema.define(version: 2021_01_16_064550) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_categories_on_ancestry"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "summary"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image"
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_posts_on_category_id"
   end
 
   create_table "taggings", force: :cascade do |t|
