@@ -12,6 +12,10 @@ pl:
       category:
         name: "Nazwa kategorii"
         parent_id: "Kategoria rodzic"
+      user:
+        password: "Hasło"
+        password_confirmation: "Potwierdzenie hasła"
+        sign_up: "Zarejestruj się"
     errors:
       models:
         post:
@@ -26,3 +30,9 @@ pl:
           attributes:
             name:
               blank: "nie może być pusta"
+        user:
+          attributes:
+            email:
+              blank: "nie może być pusty"
+            password:
+              blank: "nie może być puste"

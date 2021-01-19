@@ -8,11 +8,13 @@
         |
         <%= link_to @post.category.name, @post.category %>
       <% end %>
-      |
-      <%= link_to "Edytować", edit_post_path(@post) %>
-      |
-      <%= link_to "Usunąć", post_path(@post), method: :delete,
-        data: { confirm: "Jesteś pewien?" } %>
+      <% if user_signed_in? %>
+        |
+        <%= link_to "Edytować", edit_post_path(@post) %>
+        |
+        <%= link_to "Usunąć", post_path(@post), method: :delete,
+          data: { confirm: "Jesteś pewien?" } %>
+      <% end %>
     </small>
   </section>
   <section class="post-body">

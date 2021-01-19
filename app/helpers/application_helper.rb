@@ -9,4 +9,13 @@ module ApplicationHelper
     result << content_tag(:li, category.name, class: "breadcrumb-item active")
     result.join('').html_safe
   end
+
+  def bootstrap_class_for(name)
+    { success: "alert-success",
+      error: "alert-danger", # for devise
+      danger: "alert-danger",
+      alert: "alert-warning",
+      notice: "alert-info"
+    }[name.to_sym] || name
+  end
 end
