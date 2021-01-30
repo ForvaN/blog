@@ -5,6 +5,9 @@ pl:
   will_paginate:
     previous_label: "&#10096;"
     next_label: "&#10097;"
+  posts:
+      index:
+        title: "Artykuły"
   admin:
     categories:
       index:
@@ -16,8 +19,6 @@ pl:
       form:
         submit: "%{action} kategorię"
     posts:
-      index:
-        title: "Artykuły"
       new:
         title: "Nowy artykuł"
       edit:

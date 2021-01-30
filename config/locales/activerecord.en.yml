@@ -1,0 +1,38 @@
+pl:
+  activerecord:
+    models:
+      post: "Post"
+      category: "Category"
+    attributes:
+      post:
+        title: "Title"
+        summary: "Summary"
+        body: "Text"
+        all_tags: "Tags"
+      category:
+        name: "Category name"
+        parent_id: "Parent category"
+      user:
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        sign_up: "Sign in"
+    errors:
+      models:
+        post:
+          attributes:
+            title:
+              blank: "can't be blank"
+            summary:
+              blank: "can't be blank"
+            body:
+              blank: "can't be blank"
+        category:
+          attributes:
+            name:
+              blank: "can't be blank"
+        user:
+          attributes:
+            email:
+              blank: "can't be blank"
+            password:
+              blank: "can't be blank"
