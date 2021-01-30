@@ -5,21 +5,22 @@ pl:
   will_paginate:
     previous_label: "&#10096;"
     next_label: "&#10097;"
-  posts:
-    index:
-      title: "Artykuły"
-    new:
-      title: "Nowy artykuł"
-    edit:
-      title: "Edycja artykułu"
-    form:
-      submit: "%{action} artykuł"
-  categories:
-    index:
-      title: "Kategorie"
-    new:
-      title: "Nowa kategoria"
-    edit:
-      title: "Edycja kategorii"
-    form:
-      submit: "%{action} kategorię"
+  admin:
+    categories:
+      index:
+        title: "Kategorie"
+      new:
+        title: "Nowa kategoria"
+      edit:
+        title: "Edycja kategorii"
+      form:
+        submit: "%{action} kategorię"
+    posts:
+      index:
+        title: "Artykuły"
+      new:
+        title: "Nowy artykuł"
+      edit:
+        title: "Edycja artykułu"
+      form:
+        submit: "%{action} artykuł"
